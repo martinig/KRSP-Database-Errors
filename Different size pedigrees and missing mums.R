@@ -29,7 +29,7 @@ miss.mums.ped = ped %>% filter(!is.na(dam), !(dam %in% animal))  %>%
 miss.mums.flall = pedf %>% filter(!is.na(dam), !(dam %in% animal))  %>%
                                   select(animal=dam) %>% mutate(sire=NA, dam=NA) %>%
                                   group_by(animal) %>% sample_n(1)
-#48 here
+#19 here
 
 #Do same for dads
 miss.dads.ped = ped %>% filter(!is.na(sire), !(sire %in% animal))  %>%
